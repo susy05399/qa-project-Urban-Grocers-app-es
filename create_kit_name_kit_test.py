@@ -63,19 +63,9 @@ def test_7_create_kit_has_number_in_first_name_get_success_response():
 
 # Prueba 8. Error. Falta el parámetro name en la solicitud
 def test_8_create_kit_no_name_get_error_response():
-    # El diccionario con el cuerpo de la solicitud se copia del archivo "data" a la variable "user_body"
-    kit_body = data.kit_body.copy()
-    # El parámetro "name" se elimina de la solicitud
-    kit_body.pop("name")
     # Comprueba la respuesta
-    negative_assert(kit_body)
+    negative_assert(None)
 
 # Prueba 9. Error. Se ha pasado un tipo de parámetro diferente en name: número
 def test_9_create_kit_number_type_name_get_error_response():
-    # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
-    kit_body = data.kit_body_9
-    # El resultado de la solicitud para crear un nuevo kit se guarda en la variable response
-    response = sender_stand_request.post_new_client_kit(kit_body)
-
-    # Comprobar el código de estado de la respuesta
-    assert response.status_code == 400
+    negative_assert(data.kit_body_9)

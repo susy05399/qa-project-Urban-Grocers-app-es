@@ -1,14 +1,13 @@
 # data.py
 #ENCABEZADOS
 headers = {
-    "Content-Type": "application/json",
-    "Authorization": ""
-
+    "Content-Type": "application/json"
 }
 
 #CUERPO
 kit_body = {
-    "name": "a"
+    "name": "a",
+    "cardId": 1
 }
 
 #AÑADIDO: Datos necesarios para crear un usuario.
